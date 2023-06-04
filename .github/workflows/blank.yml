@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 14, 16, 18 ]
+        node: [ 14 ]
 
     name: Node ${{ matrix.node }} sample
     steps:
@@ -32,4 +32,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm install style-dictionary@^3.7.1
+      - run: style-dictionary build --config ./config.js
 
