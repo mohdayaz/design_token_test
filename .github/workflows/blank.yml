@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 15.x]
+        node-version: [15.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -19,6 +19,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install style-dictionary@^3.7.1
-        working-directory: ./package
+        working-directory: package.json
         run: |
-          npm run token-build
+          npm token-build
