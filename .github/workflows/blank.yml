@@ -1,37 +1,25 @@
-# This is a basic workflow to help you get started with Actions
+name: CI
 
-name: Action 
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ origin ]
   pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    branches: [ origin ]
 
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  build_test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 14 ]
-
-    name: Node ${{ matrix.node }} sample
+        node-version: [10.x, 15.x]
     steps:
-      - uses: actions/checkout@v3
-      - name: Run linting rules and tests
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
-      - name: npm install style-dictionary@^3.7.1
-      - working-directory: ./style-dictionary
-      - run: style-dictionary build --config ./config.js
-
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build, and test example
+        working-directory: ./example
+        run: |
+          npm install
+          npm run build --if-present
