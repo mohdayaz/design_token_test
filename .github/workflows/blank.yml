@@ -21,4 +21,4 @@ jobs:
       - name: npm install style-dictionary@^3.7.1
         working-directory: ./package
         run: |
-          npm install token-build
+          npm run token-build
