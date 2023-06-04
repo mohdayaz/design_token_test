@@ -17,7 +17,6 @@ yarn-error.log*
 
 # reason
 lib
-build
 .merlin
 .bsb.lock
 lib/*

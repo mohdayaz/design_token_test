@@ -3,13 +3,13 @@ module.exports = {
     "platforms": {
       "scss": {
         "transformGroup": "scss",
-        "prefix": "ins",
-        "buildPath": "build/assets/",
+        "prefix": "",
+        "buildPath": "build/",
         "files": [{
-          "destination": "token.scss",
+          "destination": "_variables.scss",
           "format": "scss/variables"
         }],
         "actions": ["copy_assets"]
-      }
+      },
     }
   }
