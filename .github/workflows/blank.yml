@@ -19,6 +19,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: npm install style-dictionary@^3.7.1
-        working-directory: package.json
+        working-directory: ../package.json
         run: |
           npm token-build
