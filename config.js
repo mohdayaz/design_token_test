@@ -4,7 +4,7 @@ module.exports = {
       "scss": {
         "transformGroup": "scss",
         "prefix": "ins",
-        "buildPath": "build",
+        "buildPath": "build/",
         "files": [
           {
             destination: "_colors.scss",
