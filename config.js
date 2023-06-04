@@ -1,10 +1,10 @@
 module.exports = {
-    "source": [".token.json"],
+    "source": ["./token.json"],
     "platforms": {
       "scss": {
         "transformGroup": "scss",
         "prefix": "ins",
-        "buildPath": "build/",
+        "buildPath": "build/assets/",
         "files": [{
           "destination": "token.scss",
           "format": "scss/variables"
