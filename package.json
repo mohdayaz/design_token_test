@@ -7,11 +7,9 @@
     "author": "Aman Kumar Singh <aman.singh@theporter.in>",
     "license": "MIT",
     "scripts": {
-      "token-build": "style-dictionary build --config ./config.js"
-    },
-    "dependencies": {
+        "token-build": "style-dictionary build --config ./config.js"
     },
     "devDependencies": {
-      "style-dictionary": "^3.7.1"
+        "style-dictionary": "^3.7.1"
     }
-  }
+}
