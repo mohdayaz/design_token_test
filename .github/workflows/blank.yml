@@ -26,4 +26,3 @@ jobs:
         with:
           commit_message: Automated Change
           branch: main
-          file_pattern: 'build/assets/*.scss'
